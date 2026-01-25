@@ -27,7 +27,8 @@ public class ApiFullValidationTest {
                 //body validation
                 .body("data.id", equalTo(2))
                 .body("data.email", containsString("@"))
-                .body("data.first_name",notNullValue());
+                .body("data.first_name",notNullValue())
+                .log().all();
 
 
 
